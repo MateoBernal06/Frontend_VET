@@ -11,7 +11,7 @@ export const Forgot = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const url = `${import.meta.env.VITE_BACKEND_URL}/api/recuperar-password`;
+            const url = "http://localhost:8000/api/recuperar-password";
             const respuesta = await axios.post(url, mail); // Enviar mail en lugar de form
             toast.success(respuesta.data.msg);
         } catch (error) {
