@@ -14,7 +14,7 @@ export const Confirmar = () => {
 
     const verifyToken = async () => {
         try {
-            const url = `http://localhost:8000/api/confirmar/${token}`
+            const url = `${import.meta.env.VITE_BACKEND_URL}/api/confirmar/${token}`
             const respuesta = await axios.get(url)
             console.log(respuesta.data.msg)
             toast.success(respuesta.data.msg)
